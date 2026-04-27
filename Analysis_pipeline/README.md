@@ -75,8 +75,6 @@ Curation (Manual/Automatic) -> Labeling -> Sync video data -> Plots
       - Manual Curation with SortingView
 - Manual Curation and Labeling
     - Either use **Sortingview** (code in 'APs_SpikeSorting' notebook) or **Phy** (code in 'Script for Phy')
-      - [ ] I want to try to move to sortingview since it is faster
-      - [ ] I want to do the curation in the code using the Quality Metrics before I do labeling and curation
 - Syncing spike times and TTL events to LFP clock
     - 'All_SyncDatastreams.ipynb'
       - Read 3 clock signals for syncing
