@@ -1,0 +1,16 @@
+## Run the following script in the terminal for Tprime to sync all times to reference time.
+## In our case, we will take the spike_times.npy and TTL_times.txt and we will sync them.
+## We will use the AP clock and TTL clock and will sync them with the LFP clock.
+
+# Change the path to Tprime_dir
+cd ./tprime_dir/
+tprime_dir = "Y:\1_auditory neuropixels_BarakH\Code_BackUp\TPrime-win"
+# Run Tprime
+Usage:
+>TPrime -syncperiod=1.0 -tostream=path/edgefile.txt <from_data> [ options ]
+
+From_data:
+-fromstream=5,path/edgefile.txt                        ;stream_index,edge_times
+-events=5,path/in_eventfile.txt,path/out_eventfile.txt ;stream_index,in_event_times,out_event_times
+
+TPrime -syncperiod=1.000000 -tostream=Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\Tprime_times\LFP_sync_times.txt -fromstream=0,Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\Tprime_times\AP_sync_times.txt -fromstream=1,Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\Tprime_times\NI_sync_times.txt -events=0,Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\kilosort4\spike_times_sec.npy,Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\kilosort4\spike_times_sec_adj.npy -events=1,Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\Tprime_times\TTL_times.txt,Y:\1_auditory_neuropixels_BarakH\20240319_C9_T2_NP2_-10dB_g0\Tprime_times\TTL_times_adj.txt
