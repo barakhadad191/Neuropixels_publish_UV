@@ -1,4 +1,0 @@
-Change path to "phy_folder"
-
-Run:
-phy template-gui  .\params.py
